@@ -5,7 +5,7 @@ import axios from 'axios'
 const ViewStudent = () => {
     const[data,setdata]=useState([])
     const fetchData=()=>{
-        axios.get("https://courseapplogix.onrender.com/getdata").then(
+        axios.get("http://localhost:8080/view").then(
             (response)=>{
                 setdata(response.data)
             }

@@ -21,7 +21,7 @@ const AddStudent = () => {
     }
     const readValue =() => {
         console.log(data)
-        axios.post(" https://courseapplogix.onrender.com/addstudents",data).then(
+        axios.post("http://localhost:8080/add",data).then(
             (response) => {
                 console.log(response.data)
                 if (response.data.status == "success") 
@@ -40,7 +40,7 @@ const AddStudent = () => {
         <NavBar/>
          <h1><center>ADD STUDENT</center></h1>
          <br />
-        <container>
+         <div className="container">
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <div className="row g-3">
@@ -83,7 +83,7 @@ const AddStudent = () => {
                     </div>
                 </div>
             </div>
-        </container>
+        </div>
     </div>
   )
 }
